@@ -16,5 +16,8 @@
     "url": "https://github.com/Omkar-eng-cr/examify/issues"
   },
   "homepage": "https://github.com/Omkar-eng-cr/examify#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
