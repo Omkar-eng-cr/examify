@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam Result - Examify</title>
+
+</head>
+
+<body style="
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#eef2ff;
+">
+
+<!-- NAVBAR -->
+
+<div style="
+    width:100%;
+    background:#0f172a;
+    padding:20px 0;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+">
+
+    <div style="
+        width:90%;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    ">
+
+        <h2 style="
+            color:white;
+            margin:0;
+            font-size:28px;
+        ">
+            Examify Result
+        </h2>
+
+        <div style="
+            color:white;
+            font-size:18px;
+        ">
+            Online Examination System
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- MAIN RESULT SECTION -->
+
+<div style="
+    width:90%;
+    margin:auto;
+    margin-top:60px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+">
+
+    <!-- LEFT RESULT CARD -->
+
+    <div style="
+        flex:2;
+        min-width:350px;
+        background:white;
+        padding:50px;
+        border-radius:20px;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        text-align:center;
+    ">
+
+        <!-- RESULT ICON -->
+
+        <div style="
+            width:120px;
+            height:120px;
+            background:#dcfce7;
+            margin:auto;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-bottom:25px;
+        ">
+
+            <span style="
+                font-size:60px;
+            ">
+                🏆
+            </span>
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1 style="
+            color:#0f172a;
+            font-size:45px;
+            margin-bottom:15px;
+        ">
+            Exam Completed
+        </h1>
+
+        <p style="
+            color:gray;
+            font-size:18px;
+            margin-bottom:40px;
+        ">
+            Your exam has been submitted successfully
+        </p>
+
+
+        <!-- SCORE -->
+
+        <div style="
+            background:#f8fafc;
+            padding:35px;
+            border-radius:20px;
+            margin-bottom:35px;
+        ">
+
+            <h2 style="
+                color:#2563eb;
+                margin-bottom:15px;
+            ">
+                Your Score
+            </h2>
+
+            <h1 style="
+                font-size:70px;
+                margin:0;
+                color:#0f172a;
+            ">
+                <%= score %> / <%= total %>
+            </h1>
+
+        </div>
+
+
+        <!-- PASS FAIL -->
+
+        <% if(score >= 2){ %>
+
+            <div style="
+                background:#dcfce7;
+                color:#16a34a;
+                padding:18px;
+                border-radius:12px;
+                font-size:22px;
+                font-weight:bold;
+                margin-bottom:30px;
+            ">
+
+                ✅ Congratulations! You Passed
+
+            </div>
+
+        <% } else { %>
+
+            <div style="
+                background:#fee2e2;
+                color:#dc2626;
+                padding:18px;
+                border-radius:12px;
+                font-size:22px;
+                font-weight:bold;
+                margin-bottom:30px;
+            ">
+
+                ❌ Better Luck Next Time
+
+            </div>
+
+        <% } %>
+
+
+        <!-- BUTTONS -->
+
+        <div style="
+            margin-top:40px;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        ">
+
+            <!-- HOME BUTTON -->
+
+            <a href="/">
+
+                <button style="
+                    background:#2563eb;
+                    color:white;
+                    border:none;
+                    padding:15px 35px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:18px;
+                    font-weight:bold;
+                    box-shadow:0px 5px 15px rgba(37,99,235,0.3);
+                ">
+
+                    Go Home
+
+                </button>
+
+            </a>
+
+
+            <!-- RETAKE BUTTON -->
+
+            <a href="/exam">
+
+                <button style="
+                    background:#16a34a;
+                    color:white;
+                    border:none;
+                    padding:15px 35px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:18px;
+                    font-weight:bold;
+                    box-shadow:0px 5px 15px rgba(22,163,74,0.3);
+                ">
+
+                    Retake Exam
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE PANEL -->
+
+    <div style="
+        flex:1;
+        min-width:300px;
+        display:flex;
+        flex-direction:column;
+        gap:25px;
+    ">
+
+        <!-- PERFORMANCE -->
+
+        <div style="
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="
+                color:#0f172a;
+                margin-bottom:25px;
+            ">
+                Performance
+            </h2>
+
+            <div style="
+                margin-bottom:20px;
+            ">
+
+                <p style="
+                    margin-bottom:8px;
+                    color:gray;
+                ">
+                    Score Percentage
+                </p>
+
+                <div style="
+                    width:100%;
+                    background:#e5e7eb;
+                    height:15px;
+                    border-radius:10px;
+                    overflow:hidden;
+                ">
+
+                    <div style="
+                        width:<%= (score / total) * 100 %>%;
+                        background:#2563eb;
+                        height:100%;
+                    ">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div style="
+                margin-top:25px;
+                font-size:18px;
+                color:#374151;
+                line-height:35px;
+            ">
+
+                <p>
+                    ✔ Correct Answers:
+                    <strong>
+                        <%= score %>
+                    </strong>
+                </p>
+
+                <p>
+                    ✘ Wrong Answers:
+                    <strong>
+                        <%= total - score %>
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXAM DETAILS -->
+
+        <div style="
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="
+                color:#0f172a;
+                margin-bottom:25px;
+            ">
+                Exam Details
+            </h2>
+
+            <div style="
+                color:#374151;
+                font-size:17px;
+                line-height:40px;
+            ">
+
+                <p>
+                    📘 Subject:
+                    <strong>MCQ Test</strong>
+                </p>
+
+                <p>
+                    ⏰ Duration:
+                    <strong>30 Minutes</strong>
+                </p>
+
+                <p>
+                    📝 Total Questions:
+                    <strong><%= total %></strong>
+                </p>
+
+                <p>
+                    📅 Status:
+                    <strong style="color:#16a34a;">
+                        Completed
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div style="
+    width:100%;
+    background:#0f172a;
+    margin-top:80px;
+    padding:20px 0;
+">
+
+    <h3 style="
+        color:white;
+        text-align:center;
+        margin:0;
+        font-weight:normal;
+    ">
+        © 2026 Examify | Developed By Omkar Chemate
+    </h3>
+
+</div>
+
+</body>
+</html>

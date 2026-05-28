@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Examify - Online MCQ Exam Portal</title>
+
+</head>
+
+<body style="
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fc;
+">
+
+<!-- NAVBAR -->
+
+<div style="
+    width:100%;
+    background:#0f172a;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+">
+
+    <div style="
+        width:90%;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    ">
+
+        <h2 style="
+            color:white;
+            margin:0;
+            font-size:30px;
+        ">
+            Examify
+        </h2>
+
+        <div>
+
+            <a href="/login" style="text-decoration:none;">
+
+                <button style="
+                    background:#2563eb;
+                    color:white;
+                    border:none;
+                    padding:12px 25px;
+                    border-radius:8px;
+                    cursor:pointer;
+                    font-size:16px;
+                    margin-right:10px;
+                    font-weight:bold;
+                ">
+                    Student Login
+                </button>
+
+            </a>
+
+            <a href="/admin" style="text-decoration:none;">
+
+                <button style="
+                    background:white;
+                    color:#2563eb;
+                    border:none;
+                    padding:12px 25px;
+                    border-radius:8px;
+                    cursor:pointer;
+                    font-size:16px;
+                    font-weight:bold;
+                ">
+                    Admin Panel
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- HERO SECTION -->
+
+<div style="
+    width:90%;
+    margin:auto;
+    margin-top:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+">
+
+    <!-- LEFT -->
+
+    <div style="
+        width:50%;
+        min-width:300px;
+    ">
+
+        <h1 style="
+            font-size:60px;
+            color:#0f172a;
+            line-height:75px;
+            margin-bottom:20px;
+        ">
+            Smart Online <br>
+            MCQ Examination System
+        </h1>
+
+        <p style="
+            font-size:20px;
+            color:gray;
+            line-height:35px;
+        ">
+            Conduct secure online examinations with live monitoring,
+            timer-based tests, auto results, anti-cheating system,
+            and complete admin dashboard management.
+        </p>
+
+        <div style="
+            margin-top:40px;
+        ">
+
+            <a href="/login">
+
+                <button style="
+                    background:#2563eb;
+                    color:white;
+                    border:none;
+                    padding:16px 40px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:18px;
+                    font-weight:bold;
+                    margin-right:15px;
+                    box-shadow:0px 5px 15px rgba(37,99,235,0.3);
+                ">
+                    Start Exam
+                </button>
+
+            </a>
+
+            <a href="#features">
+
+                <button style="
+                    background:white;
+                    color:#2563eb;
+                    border:2px solid #2563eb;
+                    padding:16px 40px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:18px;
+                    font-weight:bold;
+                ">
+                    Explore Features
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div style="
+        width:40%;
+        min-width:300px;
+        text-align:center;
+    ">
+
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+
+            style="
+                width:100%;
+                max-width:500px;
+                filter:drop-shadow(0px 10px 20px rgba(0,0,0,0.2));
+            "
+        >
+
+    </div>
+
+</div>
+
+
+
+<!-- STATS SECTION -->
+
+<div style="
+    width:90%;
+    margin:auto;
+    margin-top:100px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:25px;
+">
+
+    <div style="
+        background:white;
+        width:22%;
+        min-width:220px;
+        padding:35px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+    ">
+
+        <h1 style="
+            color:#2563eb;
+            font-size:55px;
+            margin:0;
+        ">
+            500+
+        </h1>
+
+        <p style="
+            color:gray;
+            font-size:18px;
+        ">
+            Students
+        </p>
+
+    </div>
+
+
+    <div style="
+        background:white;
+        width:22%;
+        min-width:220px;
+        padding:35px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+    ">
+
+        <h1 style="
+            color:#16a34a;
+            font-size:55px;
+            margin:0;
+        ">
+            100+
+        </h1>
+
+        <p style="
+            color:gray;
+            font-size:18px;
+        ">
+            Exams Conducted
+        </p>
+
+    </div>
+
+
+    <div style="
+        background:white;
+        width:22%;
+        min-width:220px;
+        padding:35px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+    ">
+
+        <h1 style="
+            color:#dc2626;
+            font-size:55px;
+            margin:0;
+        ">
+            24/7
+        </h1>
+
+        <p style="
+            color:gray;
+            font-size:18px;
+        ">
+            Monitoring
+        </p>
+
+    </div>
+
+
+    <div style="
+        background:white;
+        width:22%;
+        min-width:220px;
+        padding:35px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+    ">
+
+        <h1 style="
+            color:#f59e0b;
+            font-size:55px;
+            margin:0;
+        ">
+            AI
+        </h1>
+
+        <p style="
+            color:gray;
+            font-size:18px;
+        ">
+            Anti Cheating
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- FEATURES SECTION -->
+
+<div id="features" style="
+    width:90%;
+    margin:auto;
+    margin-top:120px;
+">
+
+    <h1 style="
+        text-align:center;
+        color:#0f172a;
+        font-size:50px;
+        margin-bottom:60px;
+    ">
+        Advanced Features
+    </h1>
+
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        gap:30px;
+    ">
+
+        <!-- FEATURE CARD -->
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:260px;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="color:#2563eb;">
+                📘 Online MCQ Exam
+            </h2>
+
+            <p style="
+                color:gray;
+                line-height:30px;
+                font-size:17px;
+            ">
+                Students can attend online MCQ exams from anywhere with secure login access.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:260px;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="color:#2563eb;">
+                ⏰ Live Timer
+            </h2>
+
+            <p style="
+                color:gray;
+                line-height:30px;
+                font-size:17px;
+            ">
+                Automatic timer system with auto submit functionality after exam ends.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:260px;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="color:#2563eb;">
+                📷 Live Camera Monitoring
+            </h2>
+
+            <p style="
+                color:gray;
+                line-height:30px;
+                font-size:17px;
+            ">
+                Camera monitoring system helps prevent cheating during online exams.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:260px;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="color:#2563eb;">
+                🏆 Instant Results
+            </h2>
+
+            <p style="
+                color:gray;
+                line-height:30px;
+                font-size:17px;
+            ">
+                Students get instant scores and performance reports after exam submission.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:260px;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="color:#2563eb;">
+                👨‍💻 Admin Dashboard
+            </h2>
+
+            <p style="
+                color:gray;
+                line-height:30px;
+                font-size:17px;
+            ">
+                Admin can upload questions, manage exams, monitor students, and view reports.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:260px;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h2 style="color:#2563eb;">
+                🔒 Anti Cheating System
+            </h2>
+
+            <p style="
+                color:gray;
+                line-height:30px;
+                font-size:17px;
+            ">
+                Tab switch detection, right click disable, and copy protection system.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- HOW IT WORKS -->
+
+<div style="
+    width:90%;
+    margin:auto;
+    margin-top:120px;
+">
+
+    <h1 style="
+        text-align:center;
+        font-size:50px;
+        color:#0f172a;
+        margin-bottom:60px;
+    ">
+        How It Works
+    </h1>
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        gap:30px;
+    ">
+
+        <div style="
+            background:white;
+            width:20%;
+            min-width:220px;
+            padding:35px;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h1 style="color:#2563eb;">
+                1
+            </h1>
+
+            <h2>Student Login</h2>
+
+            <p style="color:gray;">
+                Students securely login into the portal.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:20%;
+            min-width:220px;
+            padding:35px;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h1 style="color:#16a34a;">
+                2
+            </h1>
+
+            <h2>Start Exam</h2>
+
+            <p style="color:gray;">
+                Students begin online MCQ examination.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:20%;
+            min-width:220px;
+            padding:35px;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h1 style="color:#dc2626;">
+                3
+            </h1>
+
+            <h2>Live Monitoring</h2>
+
+            <p style="color:gray;">
+                Camera and anti-cheating systems stay active.
+            </p>
+
+        </div>
+
+
+
+        <div style="
+            background:white;
+            width:20%;
+            min-width:220px;
+            padding:35px;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        ">
+
+            <h1 style="color:#f59e0b;">
+                4
+            </h1>
+
+            <h2>Get Result</h2>
+
+            <p style="color:gray;">
+                Instant result generated after submission.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ABOUT SECTION -->
+
+<div style="
+    width:90%;
+    margin:auto;
+    margin-top:120px;
+    background:white;
+    padding:60px;
+    border-radius:25px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+">
+
+    <h1 style="
+        color:#0f172a;
+        font-size:45px;
+    ">
+        About Examify
+    </h1>
+
+    <p style="
+        color:gray;
+        line-height:38px;
+        font-size:19px;
+    ">
+        Examify is a professional online examination platform designed for conducting secure digital examinations.
+        The platform includes advanced features such as live monitoring, anti-cheating protection, auto result generation,
+        question upload management, admin dashboard, timer-based exams, and student activity monitoring.
+        This project is developed using Node.js, Express.js, EJS, HTML, CSS, and JavaScript.
+    </p>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div style="
+    width:100%;
+    background:#0f172a;
+    margin-top:120px;
+    padding:30px 0;
+">
+
+    <div style="
+        width:90%;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    ">
+
+        <div>
+
+            <h2 style="
+                color:white;
+                margin-bottom:10px;
+            ">
+                Examify
+            </h2>
+
+            <p style="
+                color:#cbd5e1;
+                line-height:28px;
+            ">
+                Secure Online Examination Platform
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3 style="color:white;">
+                Quick Links
+            </h3>
+
+            <p style="color:#cbd5e1;">Home</p>
+            <p style="color:#cbd5e1;">Student Login</p>
+            <p style="color:#cbd5e1;">Admin Panel</p>
+
+        </div>
+
+
+        <div>
+
+            <h3 style="color:white;">
+                Features
+            </h3>
+
+            <p style="color:#cbd5e1;">Live Monitoring</p>
+            <p style="color:#cbd5e1;">Auto Results</p>
+            <p style="color:#cbd5e1;">MCQ Tests</p>
+
+        </div>
+
+    </div>
+
+    <hr style="
+        margin-top:30px;
+        border:1px solid #334155;
+        width:90%;
+    ">
+
+    <h3 style="
+        color:white;
+        text-align:center;
+        margin-top:20px;
+        font-weight:normal;
+    ">
+        © 2026 Examify | Developed By Omkar Chemate
+    </h3>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Examify</title>
+
+</head>
+
+<body style="
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#eef2ff;
+">
+
+<!-- NAVBAR -->
+
+<div style="
+    width:100%;
+    background:#0f172a;
+    padding:20px 0;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+">
+
+    <div style="
+        width:90%;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    ">
+
+        <h2 style="
+            color:white;
+            margin:0;
+            font-size:28px;
+        ">
+            Examify Dashboard
+        </h2>
+
+        <div style="
+            color:white;
+            font-size:18px;
+        ">
+
+            Welcome,
+            <span style="color:#60a5fa;">
+                <%= username %>
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN DASHBOARD -->
+
+<div style="
+    width:90%;
+    margin:auto;
+    margin-top:50px;
+">
+
+    <!-- TOP CARDS -->
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        gap:25px;
+    ">
+
+        <!-- CARD 1 -->
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:250px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+            text-align:center;
+        ">
+
+            <h2 style="
+                color:#2563eb;
+                margin-bottom:15px;
+            ">
+                Total Questions
+            </h2>
+
+            <h1 style="
+                font-size:50px;
+                color:#0f172a;
+                margin:0;
+            ">
+                30
+            </h1>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:250px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+            text-align:center;
+        ">
+
+            <h2 style="
+                color:#2563eb;
+                margin-bottom:15px;
+            ">
+                Exam Duration
+            </h2>
+
+            <h1 style="
+                font-size:50px;
+                color:#0f172a;
+                margin:0;
+            ">
+                30 Min
+            </h1>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div style="
+            background:white;
+            width:28%;
+            min-width:250px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+            text-align:center;
+        ">
+
+            <h2 style="
+                color:#2563eb;
+                margin-bottom:15px;
+            ">
+                Current Time
+            </h2>
+
+            <h1 id="clock" style="
+                font-size:35px;
+                color:#0f172a;
+                margin:0;
+            ">
+                00:00:00
+            </h1>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXAM PANEL -->
+
+    <div style="
+        background:white;
+        margin-top:50px;
+        padding:50px;
+        border-radius:20px;
+        box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+        text-align:center;
+    ">
+
+        <h1 style="
+            color:#0f172a;
+            font-size:45px;
+            margin-bottom:20px;
+        ">
+            Online MCQ Examination
+        </h1>
+
+        <p style="
+            color:gray;
+            font-size:20px;
+            line-height:35px;
+            width:80%;
+            margin:auto;
+        ">
+            Read all instructions carefully before starting the exam.
+            The exam will automatically submit after the timer ends.
+        </p>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div style="
+            margin-top:40px;
+            text-align:left;
+            width:80%;
+            margin-left:auto;
+            margin-right:auto;
+            background:#f8fafc;
+            padding:30px;
+            border-radius:15px;
+        ">
+
+            <h2 style="
+                color:#2563eb;
+                margin-bottom:20px;
+            ">
+                Instructions
+            </h2>
+
+            <ul style="
+                color:#374151;
+                line-height:35px;
+                font-size:18px;
+            ">
+
+                <li>Total Questions: 30</li>
+
+                <li>Each Question Carries 1 Mark</li>
+
+                <li>No Negative Marking</li>
+
+                <li>Do Not Refresh Browser During Exam</li>
+
+                <li>Exam Will Auto Submit After Time Ends</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- START BUTTON -->
+
+        <div style="
+            margin-top:50px;
+        ">
+
+            <a href="/exam">
+
+                <button style="
+                    background:#16a34a;
+                    color:white;
+                    border:none;
+                    padding:18px 45px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    font-size:20px;
+                    font-weight:bold;
+                    box-shadow:0px 5px 15px rgba(22,163,74,0.3);
+                ">
+
+                    Start Exam
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div style="
+    width:100%;
+    background:#0f172a;
+    margin-top:80px;
+    padding:20px 0;
+">
+
+    <h3 style="
+        color:white;
+        text-align:center;
+        margin:0;
+        font-weight:normal;
+    ">
+        © 2026 Examify | Developed By Omkar Chemate
+    </h3>
+
+</div>
+
+
+<!-- CLOCK SCRIPT -->
+
+<script>
+
+function updateClock() {
+
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    document.getElementById("clock").innerHTML =
+        hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(updateClock, 1000);
+
+updateClock();
+
+</script>
+
+</body>
+</html>
