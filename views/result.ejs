@@ -17,6 +17,14 @@
     background:#eef2ff;
 ">
 
+<%
+    let percentage = 0;
+
+    if(total > 0){
+        percentage = (score / total) * 100;
+    }
+%>
+
 <!-- NAVBAR -->
 
 <div style="
@@ -32,6 +40,8 @@
         display:flex;
         justify-content:space-between;
         align-items:center;
+        flex-wrap:wrap;
+        gap:15px;
     ">
 
         <h2 style="
@@ -67,11 +77,11 @@
     gap:30px;
 ">
 
-    <!-- LEFT RESULT CARD -->
+    <!-- LEFT CARD -->
 
     <div style="
         flex:2;
-        min-width:350px;
+        min-width:320px;
         background:white;
         padding:50px;
         border-radius:20px;
@@ -79,7 +89,7 @@
         text-align:center;
     ">
 
-        <!-- RESULT ICON -->
+        <!-- ICON -->
 
         <div style="
             width:120px;
@@ -145,12 +155,21 @@
                 <%= score %> / <%= total %>
             </h1>
 
+            <p style="
+                font-size:22px;
+                color:#16a34a;
+                margin-top:15px;
+                font-weight:bold;
+            ">
+                <%= percentage.toFixed(2) %>%
+            </p>
+
         </div>
 
 
         <!-- PASS FAIL -->
 
-        <% if(score >= 2){ %>
+        <% if(percentage >= 40){ %>
 
             <div style="
                 background:#dcfce7;
@@ -195,7 +214,7 @@
             flex-wrap:wrap;
         ">
 
-            <!-- HOME BUTTON -->
+            <!-- HOME -->
 
             <a href="/">
 
@@ -208,7 +227,6 @@
                     cursor:pointer;
                     font-size:18px;
                     font-weight:bold;
-                    box-shadow:0px 5px 15px rgba(37,99,235,0.3);
                 ">
 
                     Go Home
@@ -218,7 +236,7 @@
             </a>
 
 
-            <!-- RETAKE BUTTON -->
+            <!-- RETAKE -->
 
             <a href="/exam">
 
@@ -231,7 +249,6 @@
                     cursor:pointer;
                     font-size:18px;
                     font-weight:bold;
-                    box-shadow:0px 5px 15px rgba(22,163,74,0.3);
                 ">
 
                     Retake Exam
@@ -246,7 +263,7 @@
 
 
 
-    <!-- RIGHT SIDE PANEL -->
+    <!-- RIGHT PANEL -->
 
     <div style="
         flex:1;
@@ -272,39 +289,37 @@
                 Performance
             </h2>
 
+            <p style="
+                color:gray;
+                margin-bottom:10px;
+            ">
+                Score Percentage
+            </p>
+
+            <!-- PROGRESS BAR -->
+
             <div style="
-                margin-bottom:20px;
+                width:100%;
+                background:#e5e7eb;
+                height:18px;
+                border-radius:10px;
+                overflow:hidden;
             ">
 
-                <p style="
-                    margin-bottom:8px;
-                    color:gray;
+                <!-- <div style="
+                    width:<%= percentage %>%;
+                    background:#2563eb;
+                    height:100%;
                 ">
-                    Score Percentage
-                </p>
-
-                <div style="
-                    width:100%;
-                    background:#e5e7eb;
-                    height:15px;
-                    border-radius:10px;
-                    overflow:hidden;
-                ">
-
-                    <div style="
-                        width:<%= (score / total) * 100 %>%;
-                        background:#2563eb;
-                        height:100%;
-                    ">
-                    </div>
-
-                </div>
+                </div> -->
 
             </div>
 
 
+            <!-- DETAILS -->
+
             <div style="
-                margin-top:25px;
+                margin-top:30px;
                 font-size:18px;
                 color:#374151;
                 line-height:35px;
@@ -312,16 +327,17 @@
 
                 <p>
                     ✔ Correct Answers:
-                    <strong>
-                        <%= score %>
-                    </strong>
+                    <strong><%= score %></strong>
                 </p>
 
                 <p>
                     ✘ Wrong Answers:
-                    <strong>
-                        <%= total - score %>
-                    </strong>
+                    <strong><%= total - score %></strong>
+                </p>
+
+                <p>
+                    📊 Percentage:
+                    <strong><%= percentage.toFixed(2) %>%</strong>
                 </p>
 
             </div>
