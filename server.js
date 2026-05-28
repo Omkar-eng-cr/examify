@@ -957,8 +957,10 @@ app.get("/delete-question/:index", (req, res) => {
 // SERVER
 // ==========================
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log("Server Running On http://localhost:3000");
+app.listen(PORT, () => {
+
+    console.log(`Server Running On Port ${PORT}`);
 
 });
